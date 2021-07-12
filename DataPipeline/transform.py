@@ -40,19 +40,18 @@ def transformation_1():
     analysis_df = analysis_df.groupby(['raceId', 'driverId', 'name', 'forename', 'surname'], as_index=False)['duration'].mean()
 
     analysis_df.to_csv(
-        'etl/transform_files/transformation_1.csv', 
+        'transformation_1.csv', 
         index=False, 
         encoding='utf-8'
     )
 
 
 def transformation_2():
-    driver_df = driver_df
     driver_df['code'] = driver_df['surname'].str.upper()
     driver_df['code'] = driver_df['code'].str.slice(start=0, stop=3)
 
     driver_df.to_csv(
-        'etl/transform_files/transformation_2.csv', 
+        'transformation_2.csv', 
         index=False, 
         encoding='utf-8'
     )
@@ -75,3 +74,5 @@ def transformation_3(season_year):
     #exception handling should be implemented in the event that the season_year entered is not within the range of years in the file
 
 
+transformation_1()
+transformation_2()
