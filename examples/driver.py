@@ -12,6 +12,3 @@ findspark.init()
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.master("local[1]").appName("testApp").getOrCreate()
-csv_path = "../data/circuits.csv"
-df = spark.read.format("csv").load(csv_path).limit(10)
-print(df.collect())
