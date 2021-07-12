@@ -6,6 +6,7 @@ import os
 csv_files = glob.glob('**/*.csv', recursive=True)
 
 def dataframes_to_pickle():
+  os.mkdir('pickle_files')
   for f in csv_files:
     filename = f.split("\\", 1)[1]
     df = pd.read_csv(f)
