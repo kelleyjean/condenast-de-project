@@ -11,7 +11,7 @@ files = glob.glob(path + "/*.csv")
 def eda():
     try:
         print("Writing sample data exploratory analysis to file 'eda_info.txt'...")
-        with open('EDA\eda_files\eda_info.txt', 'w') as f:
+        with open('eda_info.txt', 'w') as f:
             for filename in files:
                 f.write(filename + "\n")
                 data = pd.read_csv(filename)
@@ -22,4 +22,5 @@ def eda():
     finally:
         f.close()
         print("File closed.")
+
 eda()
