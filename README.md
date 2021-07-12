@@ -4,7 +4,7 @@ This README contains an overview of what is contained within the Data Pipeline p
 
 First, install requirements.txt by running *pip install -r requirements.txt* to make sure all dependences are accounted for. If you are already running some of these packages, please set up a virtual environment so as to not change any versions you may have.
 
-The folder "EDA" contains a script that will write the names of the columns in each sample Formula One Championship csv and their respective datatypes to a separate csv file that can be referenced quickly when needing to do transformations or apply business logic to a column. To get that csv, simply run eda_script.py in your terminal. Please note, this step is optional and is not required to run the rest of the program.
+The script eda_script.py will write the names of the columns in each sample Formula One Championship csv and their respective datatypes to a separate csv file that can be referenced quickly when needing to do transformations or apply business logic to a column. To get that csv, simply run eda_script.py in your terminal. Please note, this step is optional and is not required to run the rest of the program.
 
 Run extract.py first. The extract.py module runs through each sample csv, converts it to a dataframe, and temporarily stores it locally as a pickle file.
 
